@@ -8,7 +8,7 @@ const Food = () => {
     const handleFilterType: filterType = (category: string) => {
         setFoods(
             data.filter((item) => {
-                return (item.category = category);
+                return item.category === category;
             })
         );
     };
@@ -48,7 +48,7 @@ const Food = () => {
                             Pizza
                         </button>
                         <button
-                            onClick={() => handleFilterType("saladsd")}
+                            onClick={() => handleFilterType("salad")}
                             className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
                         >
                             Salads
@@ -64,16 +64,28 @@ const Food = () => {
                 <div>
                     <p className='font-bold text-gray-[700]'>Filter Price</p>
                     <div className='flex justify-between max-w-[390px]'>
-                        <button className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'>
+                        <button
+                            onClick={() => handleFilterPrice("$")}
+                            className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                        >
                             $
                         </button>
-                        <button className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'>
+                        <button
+                            onClick={() => handleFilterPrice("$$")}
+                            className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                        >
                             $$
                         </button>
-                        <button className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'>
+                        <button
+                            onClick={() => handleFilterPrice("$$$")}
+                            className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                        >
                             $$$
                         </button>
-                        <button className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'>
+                        <button
+                            onClick={() => handleFilterPrice("$$$$")}
+                            className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'
+                        >
                             $$$$
                         </button>
                     </div>
