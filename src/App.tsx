@@ -1,5 +1,11 @@
+import NavBar from "./components/NavBar";
+
 function App() {
-    return <div className='bg-red-200'>hello</div>;
+    return (
+        <div className='min-h-screen'>
+            <NavBar />
+        </div>
+    );
 }
 
 export default App;
